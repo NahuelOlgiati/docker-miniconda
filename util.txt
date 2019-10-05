@@ -1,0 +1,2 @@
+#Change extension
+find . -name "*.FIT" -exec rename 's/.FIT$/.fit/' {} \;
