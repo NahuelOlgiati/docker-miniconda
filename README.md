@@ -1,6 +1,6 @@
 # docker-miniconda
-###### Use miniconda3-centos
-###### continuum version under development
+- Use miniconda3-centos
+- continuum version under development
 
 ## for build
 sh build.sh
@@ -30,4 +30,4 @@ cd /home/iraf; conda activate iraf27; ds9 & printf "xgterm\n" | mkiraf; xgterm -
 ## see on http://localhost:10000
 
 ## public image
-[link to Docker Hub] https://hub.docker.com/r/nahuelolgiati/miniconda3
+https://hub.docker.com/r/nahuelolgiati/miniconda3
