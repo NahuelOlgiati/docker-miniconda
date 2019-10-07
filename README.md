@@ -31,3 +31,6 @@ cd /home/iraf; conda activate iraf27; ds9 & printf "xgterm\n" | mkiraf; xgterm -
 
 ## public image
 https://hub.docker.com/r/nahuelolgiati/miniconda3
+
+## fit files
+http://www.rawastrodata.com
