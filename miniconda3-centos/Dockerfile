@@ -10,6 +10,7 @@ RUN yum install -y wget git bzip2 && \
     yum -y install wget libX11 libX11.i686 libXft libXft.i686 && \
     yum -y clean all
 
+#4.7.12
 ENV MINICONDA3_VERSION latest
 RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-${MINICONDA3_VERSION}-Linux-x86_64.sh -O ~/miniconda.sh && \
     /bin/bash ~/miniconda.sh -b -p /opt/conda && \
@@ -29,7 +30,8 @@ ENTRYPOINT [ "/usr/bin/tini", "--" ]
 
 RUN conda update -n base -c defaults conda && \
     conda config --add channels http://ssb.stsci.edu/astroconda && \
-    conda create -n iraf27 python=2.7 iraf-all pyraf-all stsci
+    conda create -n iraf27 python=2.7 iraf-all pyraf-all stsci && \
+    conda clean -y --all
 
 ARG USER_ID
 ARG GROUP_ID
