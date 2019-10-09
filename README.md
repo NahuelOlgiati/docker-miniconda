@@ -32,6 +32,3 @@ cd /home/iraf; conda activate iraf27; ds9 -mode none -geometry 1200x800 -zscale 
 
 ## public image
 https://hub.docker.com/r/nahuelolgiati/miniconda3
-
-## fit files
-http://www.rawastrodata.com
