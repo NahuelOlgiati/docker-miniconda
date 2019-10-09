@@ -15,7 +15,7 @@ docker run -d
 -p 10000:10000
 jare/x11-bridge
 
-## for run container
+## for run miniconda3
 docker run -it
 --rm
 --volumes-from x11-bridge
