@@ -22,7 +22,7 @@ docker run -it
 -e DISPLAY=:14
 -v /tmp/.X11-unix:/tmp/.x11-unix
 -v ~/iraf/data:/home/iraf/data
-nahuelolgiati*miniconda3
+nahuelolgiati/miniconda3
 /bin/bash
 
 ## for run iraf/ds9
