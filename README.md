@@ -7,6 +7,7 @@ sh build.sh
 
 ## for x11 forwarding
 docker run -d
+--rm
 --name x11-bridge
 -e MODE="tcp"
 -e XPRA_HTML="yes"
