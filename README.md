@@ -28,7 +28,8 @@ nahuelolgiati/miniconda3
 ## for run iraf/ds9
 cd /home/iraf; conda activate iraf27; ds9 -mode none -geometry 1200x800 -zscale -cmap bb -squared & printf "xgterm\n" | mkiraf; xgterm -sb -sl 5000 -geometry 80x48 -fn 10x20 -cr red -bg grey -e cl &
 
-## see on http://localhost:10000
+## see on
+http://localhost:10000
 
 ## public image
 https://hub.docker.com/r/nahuelolgiati/miniconda3
