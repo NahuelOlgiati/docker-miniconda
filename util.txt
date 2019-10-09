@@ -1,2 +1,5 @@
 #Change extension
 find . -name "*.FIT" -exec rename 's/.FIT$/.fit/' {} \;
+
+#Generate csv files
+find ./dark -name '*.fit' -exec basename \{} \; > ./dark/dark_filenames.csv
