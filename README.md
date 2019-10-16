@@ -9,6 +9,13 @@ docker run -d --rm --name x11-bridge -e MODE="tcp" -e XPRA_HTML="yes" -e DISPLAY
 ## for run miniconda3
 docker run -it --rm --volumes-from x11-bridge -e DISPLAY=:14 -v /tmp/.X11-unix:/tmp/.x11-unix -v ~/iraf/data:/home/iraf/data nahuelolgiati/miniconda3 /bin/bash
 
+## user permissions
+for MYGID: echo $(id -g ${USER})
+for MYUID: echo $(id -u ${USER})
+groupmod --gid MYGID iraf
+usermod  --uid MYUID iraf
+su iraf
+
 ## for run iraf/ds9
 iraf
 
