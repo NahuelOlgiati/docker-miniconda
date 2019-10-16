@@ -35,8 +35,8 @@ RUN pip uninstall -y setuptools && \
     conda create -n iraf27 python=2.7 iraf-all pyraf-all stsci && \
     conda clean -y --all
 
-ARG USER_ID
-ARG GROUP_ID
+ARG USER_ID=999
+ARG GROUP_ID=999
 
 RUN groupadd -f -g ${GROUP_ID} iraf && \
     useradd -l -u ${USER_ID} -g iraf iraf
