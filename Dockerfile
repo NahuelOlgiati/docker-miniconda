@@ -28,7 +28,9 @@ RUN chmod +x /usr/bin/tini
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 
-RUN conda update -n base -c defaults conda && \
+RUN pip uninstall -y setuptools && \
+    conda install setuptools && \
+    conda update -n base -c defaults conda && \
     conda config --add channels http://ssb.stsci.edu/astroconda && \
     conda create -n iraf27 python=2.7 iraf-all pyraf-all stsci && \
     conda clean -y --all
