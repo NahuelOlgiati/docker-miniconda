@@ -1,5 +1,19 @@
-#https://docs.docker.com/install/linux/docker-ce/ubuntu/
+#Commands
+##Change extension
+find . -name "*.FIT" -exec rename 's/.FIT$/.fit/' {} \;
 
+##Generate csv files
+find ./dark -name '*.fit' -exec basename \{} \; > ./dark/dark_filenames.csv
+
+#Info
+https://www.youtube.com/watch?v=B8GtcE9G1io
+http://hea-www.harvard.edu/~saku/CCDprocessCfA.pdf
+http://ast.noao.edu/sites/default/files/IRAF_beginners_guide.pdf
+http://www.covingtoninnovations.com/dslr/newdslr/#Arithmetic
+
+
+#Docker Install
+##https://docs.docker.com/install/linux/docker-ce/ubuntu/
 sudo apt-get update
 
 sudo apt-get install -y \

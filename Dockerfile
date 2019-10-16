@@ -43,3 +43,7 @@ RUN mkdir -p /home/iraf && chown -R iraf:iraf /home/iraf
 
 USER iraf
 ENV HOME /home/iraf
+
+WORKDIR ${HOME}
+
+RUN echo 'alias iraf="cd /home/iraf; conda activate iraf27; ds9 -mode none -geometry 1200x800 -zscale -cmap bb -squared & printf "xgterm\n" | mkiraf; xgterm -sb -sl 5000 -geometry 80x48 -fn 10x20 -cr red -bg grey -e cl &"' >> ~/.bashrc
