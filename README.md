@@ -1,4 +1,4 @@
-# docker-miniconda
+# docker-miniconda3
 
 ## for x11 forwarding
 docker run -d --rm --name x11-bridge -e MODE="tcp" -e XPRA_HTML="yes" -e DISPLAY=:14 -p 10000:10000 nahuelolgiati/xpra3
